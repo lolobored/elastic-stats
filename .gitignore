@@ -1,0 +1,6 @@
+.gradle
+.idea
+build
+result.csv
+Errors.log
+Results.csv
