@@ -65,7 +65,7 @@ public class QueriesRunnerImpl implements QueriesRunner {
 
         if (response.getStatusLine().getStatusCode()<200 || response.getStatusLine().getStatusCode()>299){
           String body= EntityUtils.toString(response.getEntity());
-          FileUtils.write(new File(ElasticSearchStats.ERROR_LOG), "File: "+query.getFile()+"\nquery["+lineNumber+"]:\n"+query.getQuery()+"\nerror:\n"+body,
+          FileUtils.write(new File(ElasticSearchStats.ERROR_LOG), "File: "+query.getFile()+"\nquery["+lineNumber+"]:\n"+query.getQuery()+"\nerror:\n"+body+"\n\n",
                   "UTF-8", true);
           success= false;
         }
